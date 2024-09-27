@@ -242,29 +242,6 @@ public class NGramTextPredictorColorfulTheme {
     }
 
     // Tokenize and build N-Gram model from a PDF file
-    /*private static void tokenizeAndCalculateProbabilityFromPDF(File pdfFile) throws IOException {
-        long startTime = System.currentTimeMillis(); // Start timer for PDF to text
-        PDDocument document = PDDocument.load(pdfFile);
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-        String text = pdfStripper.getText(document);
-        document.close();
-        long endTime = System.currentTimeMillis(); // End timer for PDF to text
-        long conversionDuration = endTime - startTime; // Calculate PDF to text conversion time
-        
-        // Calculate the byte size of the text after conversion
-        int textSizeInBytes = text.getBytes().length;
-        
-        // Convert size to KB for better readability
-        double textSizeInKB = textSizeInBytes / 1024.0;
-        
-        chatArea.append("Bot: PDF successfully converted to text in " + conversionDuration + " ms.\n");
-        chatArea.append("Bot: The size of the converted text file is approximately " + String.format("%.2f", textSizeInKB) + " KB.\n");
-
-        // Now, proceed with building the N-gram model
-        buildNGramModel(text, n);
-
-    }*/
-    // Tokenize and build N-Gram model from a PDF file
 private static void tokenizeAndCalculateProbabilityFromPDF(File pdfFile) throws IOException {
     long startTime = System.currentTimeMillis(); // Start timer for PDF to text
     PDDocument document = PDDocument.load(pdfFile);
